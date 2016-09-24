@@ -2,7 +2,7 @@ rows = 16;
 cols = 16;
 
 $(document).ready(function() {
-	makeGrid();
+	makeGrid(rows, cols);
 
   $('.cell').hover(function() {
     $(this).animate({"background-color": "black"}, 400);

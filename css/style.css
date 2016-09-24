@@ -1,4 +1,6 @@
 #gridholder {
+  border: 20px #dd0000 solid;
+  border-radius: 14px;
   background-color: #ececec;
   width: 337px;
   height: 337px;
@@ -23,4 +25,9 @@
   margin-top: 1px;
   display: inline-block;
   float: left;
+}
+
+button {
+  margin: 0 auto;
+  display: block;
 }
