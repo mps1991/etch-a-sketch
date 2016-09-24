@@ -14,8 +14,8 @@ $(document).ready(function() {
     }
   }
 
-  $('.cell').click(function() {
-    $(this).css("background-color", "black");
+  $(".cell").click(function() {
+    $(this).toggleClass("cellclicked");
   });
 
 });
