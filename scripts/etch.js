@@ -2,7 +2,14 @@ $(document).ready(function() {
 	makeGrid(16);
 
 	$("#clearbutton").click(function() {
-		makeGrid(prompt("Enter side length", 16));
+		var intRegex = /^\d+$/;
+		var size = 0;
+
+		do {
+				size = prompt("Please enter an integer for side length", 16);
+		} while (!intRegex.test(size))
+
+		makeGrid(size);
 		$(document).ready();
 	});
 });
@@ -10,8 +17,8 @@ $(document).ready(function() {
 function makeGrid(size) {
 	var $gridholder = $("#gridholder");
 	$gridholder.empty();
-  $gridholder.css("width", 11 * size + 1);
-  $gridholder.css("height", 11 * size + 1);
+  $gridholder.css("width", 21 * size + 1);
+  $gridholder.css("height", 21 * size + 1);
 	console.log($(".cell").width());
 
   for (var y = 0; y < size; y++) {
