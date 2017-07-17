@@ -23,11 +23,11 @@ function makeGrid(size) {
 
   for (var y = 0; y < size; y++) {
     var $gridrow = $("<div class='gridrow'></div>");
-    $gridrow.attr("id", "row" + y);
+    //$gridrow.attr("id", "row" + y);
     $gridholder.append($gridrow);
     for (var x = 0; x < size; x++) {
       var $cell = $("<div class='cell'></div>");
-      $cell.attr("id", "cell" + (size * y + x));
+      //$cell.attr("id", "cell" + (size * y + x));
       $gridrow.append($cell);
     }
   }
