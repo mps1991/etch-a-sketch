@@ -1,25 +1,25 @@
 $(document).ready(function() {
-	makeGrid(16);
+  makeGrid(16);
 
-	$("#clearbutton").click(function() {
-		var intRegex = /^\d+$/;
-		var size = 0;
+  $("#clearbutton").click(function() {
+    var intRegex = /^\d+$/;
+    var size = 0;
 
-		do {
-				size = prompt("Please enter an integer for side length", 16);
-		} while (!intRegex.test(size))
+    do {
+      size = prompt("Please enter an integer for side length", 16);
+    } while (!intRegex.test(size))
 
-		makeGrid(size);
-		$(document).ready();
-	});
+    makeGrid(size);
+    $(document).ready();
+  });
 });
 
 function makeGrid(size) {
-	var $gridholder = $("#gridholder");
-	$gridholder.empty();
+  var $gridholder = $("#gridholder");
+  $gridholder.empty();
   $gridholder.css("width", 21 * size + 1);
   $gridholder.css("height", 21 * size + 1);
-	console.log($(".cell").width());
+  console.log($(".cell").width());
 
   for (var y = 0; y < size; y++) {
     var $gridrow = $("<div class='gridrow'></div>");
@@ -32,7 +32,7 @@ function makeGrid(size) {
     }
   }
 
-	$('.cell').hover(function() {
+  $('.cell').hover(function() {
     $(this).animate({"background-color": "black"}, 400);
   });
 }
